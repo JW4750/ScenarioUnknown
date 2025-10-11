@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "highd-scenario-mining"
+version = "0.1.0"
+description = "Scenario mining and coverage metrics for the HighD dataset"
+readme = "README.md"
+authors = [{ name = "Scenario Mining Contributors" }]
+license = { file = "LICENSE" }
+requires-python = ">=3.9"
+dependencies = [
+  "numpy",
+  "pandas",
+  "matplotlib",
+]
+
+[project.urls]
+Homepage = "https://example.com"
+
+[project.scripts]
+highd-scenario-mining = "highd_scenario_mining.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["highd_scenario_mining"]
